@@ -1,16 +1,18 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { Provider } from "react-redux";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
+import Lannding from "./components/Landing";
+import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <Fragment>
+    <Provider store={store}>
       <Nav />
-      <h1>Hello world!</h1>
+      <Lannding />
       <Footer />
-    </Fragment>
+    </Provider>
   );
 }
 

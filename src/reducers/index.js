@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import searchReducer from "./search";
+import search from "./search";
 
 export default combineReducers({
-  movies: searchReducer
+  movies: search
 });

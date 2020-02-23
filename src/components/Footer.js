@@ -11,7 +11,7 @@ function Footer() {
           >
             Developed By:{" "}
             <span className="text-warning font-weight-normal">dinoxas</span>,
-            Using React &amp; Redux integrated with OMDB API{" "}
+            Using React &amp; Redux integrated with{" "}
             <a
               href="http://www.omdbapi.com/"
               target="_blank"

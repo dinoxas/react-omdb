@@ -7,7 +7,7 @@ const initialState = {
   movie: []
 };
 
-export default function search(state = initialState, action) {
+export default function searchMovie(state = initialState, action) {
   switch (action.type) {
     case SEARCH_MOVIE:
       return {
