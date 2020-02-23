@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaSearch } from "react-icons/fa";
-import { searchMovie } from "../actions/search";
+import { searchMovie, fetchMovies } from "../actions/search";
 import { connect } from "react-redux";
 
 class SearchForm extends Component {
@@ -10,6 +10,7 @@ class SearchForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.fetchMovies(this.props.text); //coming from mapStateToProps
   };
 
   render() {
@@ -20,7 +21,7 @@ class SearchForm extends Component {
             <FaSearch size="60" />{" "}
             <span>Search for a Movie, TV series ...</span>
           </h1>
-          <form id="searchForm">
+          <form id="searchForm" onSubmit={this.handleSubmit}>
             <input
               type="text"
               className="form-control"
@@ -28,11 +29,7 @@ class SearchForm extends Component {
               placeholder="Search Movies, TV Series ..."
               onChange={this.handleChange}
             />
-            <button
-              type="submit"
-              className="btn btn-primary btn-bg mt-3"
-              onClick={this.handleSubmit}
-            >
+            <button type="submit" className="btn btn-primary btn-bg mt-3">
               Search
             </button>
           </form>
@@ -48,4 +45,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { searchMovie })(SearchForm);
+export default connect(mapStateToProps, { searchMovie, fetchMovies })(
+  SearchForm
+);
