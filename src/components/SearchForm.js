@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FaSearch } from "react-icons/fa";
-import { searchMovie, fetchMovies } from "../actions/search";
+import { searchMovie, fetchMovies, setLoading } from "../actions/search";
 import { connect } from "react-redux";
 
 class SearchForm extends Component {
@@ -11,6 +11,7 @@ class SearchForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.fetchMovies(this.props.text); //coming from mapStateToProps
+    this.props.setLoading();
   };
 
   render() {
@@ -45,6 +46,8 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { searchMovie, fetchMovies })(
-  SearchForm
-);
+export default connect(mapStateToProps, {
+  searchMovie,
+  fetchMovies,
+  setLoading
+})(SearchForm);

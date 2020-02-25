@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FaChevronCircleRight } from "react-icons/fa";
 
 export class MovieCard extends Component {
@@ -11,10 +12,10 @@ export class MovieCard extends Component {
           <h5 className="text-light card-title">
             {movie.Title} - {movie.Year}
           </h5>
-          <a className="btn btn-primary" href="/home">
-            Movie Details <FaChevronCircleRight size="16" />
-            {/* <FaChevronRight /> */}
-          </a>
+          <Link className="btn btn-primary" to={"/movie/" + movie.imdbID}>
+            <span className="mr-10">Movie Details</span>{" "}
+            <FaChevronCircleRight size="16" />
+          </Link>
         </div>
       </div>
     );
