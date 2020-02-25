@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchMovie, setLoading } from "../actions/search";
+import { FaChevronCircleLeft, FaRegWindowRestore } from "react-icons/fa";
 import Loader from "./Loader";
 
 export class Movie extends Component {
@@ -11,17 +12,25 @@ export class Movie extends Component {
   }
   render() {
     const { loading, movie } = this.props;
+    console.log(movie);
     let movieInfo = (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-md-4 card card-body">
-            <img src={movie.Poster} className="thumbnail" alt="Poster" />
+          <h2 className="col-12 text-center mb-4">{movie.Title}</h2>
+        </div>
+        <div className="row">
+          <div className="col-lg-3 col-sm-4 mb-3">
+            <div className=" card card-body">
+              <img src={movie.Poster} className="w-100" alt="Poster" />
+            </div>
           </div>
-          <div className="col-md-8">
-            <h2 className="mb-4">{movie.Title}</h2>
+          <div className="col-lg-9 col-sm-8">
             <ul className="list-group">
               <li className="list-group-item">
                 <strong>Genre:</strong> {movie.Genre}
+              </li>
+              <li className="list-group-item">
+                <strong>Type:</strong> {movie.Type}
               </li>
               <li className="list-group-item">
                 <strong>Released:</strong> {movie.Released}
@@ -39,31 +48,32 @@ export class Movie extends Component {
                 <strong>Writer:</strong> {movie.Writer}
               </li>
               <li className="list-group-item">
-                <strong>Actors:</strong> {movie.Actors}
+                <strong>Awards:</strong> {movie.Awards}
               </li>
               <li className="list-group-item">
-                <strong>Plot:</strong> {movie.Plot}
+                <strong>Actors:</strong> {movie.Actors}
               </li>
             </ul>
           </div>
         </div>
         <div className="row">
-          <div className="card card-body bg-dark my-5 text-light">
-            <div className="col-md-12">
-              <h3>About </h3>
-              {movie.Plot}
-              <hr />
-              <a
-                href={`https://www.imdb.com/title/${movie.imdbID}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                View on IMDB
-              </a>
-              <Link to="/" className="btn btn-default text-light">
-                Go Back To Search
-              </Link>
+          <div className="col-12">
+            <div className="card card-body bg-light my-3">
+              <div className="">
+                <h3>Plot</h3>
+                <p>{movie.Plot}</p>
+                <Link to="/" className="btn btn-warning mr-3">
+                  <FaChevronCircleLeft size="16" /> Back To Search
+                </Link>
+                <a
+                  href={`https://www.imdb.com/title/${movie.imdbID}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  <FaRegWindowRestore size="16" /> View on IMDB
+                </a>
+              </div>
             </div>
           </div>
         </div>

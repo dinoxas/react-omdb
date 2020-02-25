@@ -18,10 +18,7 @@ class SearchForm extends Component {
     return (
       <div className="jumbotron jumbotron-fluid mt-5 text-center">
         <div className="container">
-          <h1 className="display-4 mb-3">
-            <FaSearch size="60" />{" "}
-            <span>Search for a Movie, TV series ...</span>
-          </h1>
+          <h1 className="h3 mb-3">Search for a Movie, TV series ...</h1>
           <form id="searchForm" onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -30,8 +27,8 @@ class SearchForm extends Component {
               placeholder="Search Movies, TV Series ..."
               onChange={this.handleChange}
             />
-            <button type="submit" className="btn btn-primary btn-bg mt-3">
-              Search
+            <button type="submit" className="btn btn-primary btn-lg mt-3">
+              <FaSearch size="18" /> Search
             </button>
           </form>
         </div>

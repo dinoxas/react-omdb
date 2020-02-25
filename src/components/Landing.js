@@ -8,7 +8,7 @@ export class Landing extends Component {
   render() {
     const { loading } = this.props;
     return (
-      <div className="container">
+      <div className="container-fluid">
         <SearchForm />
         {loading === true ? <Loader /> : <MoviesContainer />}
       </div>

@@ -6,16 +6,25 @@ export class MovieCard extends Component {
   render() {
     const { movie } = this.props;
     return (
-      <div className="col-md-3 mb-5">
-        <div className="card card-body bg-dark text-center h-100">
-          <img className="w-100 mb-2" src={movie.Poster} alt="Movie Cover" />
-          <h5 className="text-light card-title">
-            {movie.Title} - {movie.Year}
-          </h5>
-          <Link className="btn btn-primary" to={"/movie/" + movie.imdbID}>
-            <span className="mr-10">Movie Details</span>{" "}
-            <FaChevronCircleRight size="16" />
-          </Link>
+      <div className="col-lg-3 col-md-3 col-sm-6 mb-3">
+        <div className="card  text-center h-100">
+          <img
+            className="w-100 card-img-top"
+            src={movie.Poster}
+            alt="Movie Cover"
+          />
+          <div className="card-body ">
+            <h5 className=" card-title">
+              {movie.Title} - {movie.Year}
+            </h5>
+            <Link
+              className="btn btn-outline-primary btn-block"
+              to={"/movie/" + movie.imdbID}
+            >
+              <span className="mr-2">Details</span>{" "}
+              <FaChevronCircleRight size="16" />
+            </Link>
+          </div>
         </div>
       </div>
     );
