@@ -7,8 +7,10 @@ export class MoviesContainer extends Component {
     const { movies } = this.props; //movies array
     let content = "";
     content =
-      movies.length > 0
-        ? movies.map((movie, index) => <MovieCard movie={movie} key={index} />)
+      movies.Response === "True"
+        ? movies.Search.map((movie, index) => (
+            <MovieCard movie={movie} key={index} />
+          ))
         : null;
     return <div className="row">{content}</div>;
   }
