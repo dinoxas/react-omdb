@@ -17,7 +17,7 @@ export const setLoading = () => {
 
 export const fetchMovies = text => dispatch => {
   axios
-    .get(`http://www.omdbapi.com/?&apikey=${APIKey}&s=${text}`)
+    .get(`https://www.omdbapi.com/?&apikey=${APIKey}&s=${text}`)
     .then(response => {
       dispatch({
         type: FETCH_MOVIES,
@@ -29,7 +29,7 @@ export const fetchMovies = text => dispatch => {
 
 export const fetchMovie = id => dispatch => {
   axios
-    .get(`http://www.omdbapi.com/?apikey=${APIKey}&i=${id}`)
+    .get(`https://www.omdbapi.com/?apikey=${APIKey}&i=${id}`)
     .then(response =>
       dispatch({
         type: FETCH_MOVIE,
