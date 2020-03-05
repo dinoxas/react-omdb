@@ -12,19 +12,22 @@ export class Movie extends Component {
   }
   render() {
     const { loading, movie } = this.props;
-    console.log(movie);
     let movieInfo = (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <h2 className="col-12 text-center mb-4">{movie.Title}</h2>
         </div>
         <div className="row">
-          <div className="col-lg-3 col-sm-4 mb-3">
-            <div className=" card card-body">
-              <img src={movie.Poster} className="w-100" alt="Poster" />
+          <div className="col-lg-3 col-md-4 mb-3">
+            <div className="text-center">
+              <img
+                src={movie.Poster}
+                className="img-fluid img-thumbnail"
+                alt="Poster"
+              />
             </div>
           </div>
-          <div className="col-lg-9 col-sm-8">
+          <div className="col-lg-9 col-md-8">
             <ul className="list-group">
               <li className="list-group-item">
                 <strong>Genre:</strong> {movie.Genre}
@@ -63,7 +66,7 @@ export class Movie extends Component {
                 <h3>Plot</h3>
                 <p>{movie.Plot}</p>
                 <Link to="/" className="btn btn-warning mr-3">
-                  <FaChevronCircleLeft size="16" /> Back To Search
+                  <FaChevronCircleLeft size="16" /> Back
                 </Link>
                 <a
                   href={`https://www.imdb.com/title/${movie.imdbID}`}
@@ -71,7 +74,7 @@ export class Movie extends Component {
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
-                  <FaRegWindowRestore size="16" /> View on IMDB
+                  <FaRegWindowRestore size="16" /> Go to IMDB
                 </a>
               </div>
             </div>

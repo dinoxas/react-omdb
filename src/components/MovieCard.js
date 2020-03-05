@@ -6,10 +6,10 @@ export class MovieCard extends Component {
   render() {
     const { movie } = this.props;
     return (
-      <div className="col-lg-3 col-md-3 col-sm-6 mb-3">
-        <div className="card  text-center h-100">
+      <div className="col-lg-3 col-md-4 col-sm-6  mb-3">
+        <div className="text-center h-100">
           <img
-            className="w-100 card-img-top"
+            className="w-50 img-fluid img-thumbnail"
             src={movie.Poster}
             alt="Movie Cover"
           />
@@ -18,7 +18,7 @@ export class MovieCard extends Component {
               {movie.Title} - {movie.Year}
             </h5>
             <Link
-              className="btn btn-outline-primary btn-block"
+              className="btn btn-primary btn-block"
               to={"/movie/" + movie.imdbID}
             >
               <span className="mr-2">Details</span>{" "}

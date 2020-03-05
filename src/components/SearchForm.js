@@ -16,20 +16,24 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid mt-5 text-center">
+      <div className="jumbotron mt-4 text-center">
         <div className="container">
           <h1 className="h3 mb-3">Search for a Movie, TV series ...</h1>
           <form id="searchForm" onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              className="form-control"
-              name="searchText"
-              placeholder="Search Movies, TV Series ..."
-              onChange={this.handleChange}
-            />
-            <button type="submit" className="btn btn-primary btn-lg mt-3">
-              <FaSearch size="18" /> Search
-            </button>
+            <div className="input-group">
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                name="searchText"
+                placeholder="Search Movies, TV Series ..."
+                onChange={this.handleChange}
+              />
+              <div className="input-group-append">
+                <button type="submit" className="btn btn-primary btn-lg">
+                  <FaSearch size="18" /> Search
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
