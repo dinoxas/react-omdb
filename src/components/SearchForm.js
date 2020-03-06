@@ -30,7 +30,7 @@ class SearchForm extends Component {
               />
               <div className="input-group-append">
                 <button type="submit" className="btn btn-primary btn-lg">
-                  <FaSearch size="18" /> Search
+                  <FaSearch size="18" />
                 </button>
               </div>
             </div>
