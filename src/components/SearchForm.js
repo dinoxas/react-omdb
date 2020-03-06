@@ -16,7 +16,7 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <div className="jumbotron mt-4 text-center">
+      <div className="jumbotron border bg-light mt-4 text-center">
         <div className="container">
           <h1 className="h3 mb-3">Search for a Movie, TV series ...</h1>
           <form id="searchForm" onSubmit={this.handleSubmit}>
