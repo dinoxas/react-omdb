@@ -19,6 +19,10 @@ class SearchForm extends Component {
       <div className="jumbotron border bg-light mt-4 text-center">
         <div className="container">
           <h1 className="h3 mb-3">Search for a Movie, TV series ...</h1>
+          <p className="small text-center">
+            Movie search app with React &amp; Redux. Open the console to see the
+            current action and state.
+          </p>
           <form id="searchForm" onSubmit={this.handleSubmit}>
             <div className="input-group">
               <input

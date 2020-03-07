@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Nav from "./components/Nav";
-
 import Lannding from "./components/Landing";
 import Movie from "./components/Movie";
 import store from "./store";
