@@ -2,7 +2,7 @@
 
 Simple React app that fetches and displays data about movies and TV series.
 
-[DEMO](https://dinoxas-movies.netlify.com/)
+[Demo](https://dinoxas-movies.netlify.com/)
 
 ## Built With
 
