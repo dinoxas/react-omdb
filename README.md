@@ -1,6 +1,8 @@
 # Movies and TV series App with React
 
-One Paragraph of project description goes here
+Simple React app that fetches and displays data about movies and TV series.
+
+[DEMO] (https://dinoxas-movies.netlify.com/)
 
 ## Built With
 
