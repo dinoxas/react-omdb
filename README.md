@@ -1,6 +1,10 @@
 # Movies and TV series App with React
 
-One Paragraph of project description goes here
+Simple React app that displays information about movies and TV series.
+
+[Demo](https://dinoxas-movies.netlify.com/)
+
+Note: Open the console or use the Redux DevTools to see the current action and state of the app.
 
 ## Built With
 
